@@ -37,7 +37,7 @@ class Facebook implements FaceBookInterface {
     }
 }
 
-class LoginAdapter implements IfaloInterface
+class FacebookAdapter implements IfaloInterface
 {
     private $facebook;
 
@@ -58,7 +58,7 @@ class LoginAdapter implements IfaloInterface
 }
 
 $FB = new Facebook();
-$Adapter = new LoginAdapter($FB);
+$Adapter = new FacebookAdapter($FB);
 
 var_dump($Adapter->getToken());
 var_dump($Adapter->login());
