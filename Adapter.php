@@ -8,20 +8,18 @@ interface IfaloInterface
 
 class Ifalo implements IfaloInterface
 {
-    public function getToken()
-    {
+    public function getToken() {
         return md5(uniqid(rand()));
     }
 
-    public function login()
-    {
+    public function login() {
         return 'Ifalo 登入成功';
     }
 }
 
-$Ifalo = new Ifalo();
-var_dump($Ifalo->getToken());
-var_dump($Ifalo->login());
+$ifalo = new Ifalo();
+var_dump($ifalo->getToken());
+var_dump($ifalo->login());
 
 interface FaceBookInterface
 {
@@ -31,14 +29,11 @@ interface FaceBookInterface
 
 class Facebook implements FaceBookInterface
 {
-
-    public function getAccessToken()
-    {
+    public function getAccessToken() {
         return md5(uniqid(rand()));
     }
 
-    public function userLogin()
-    {
+    public function userLogin() {
         return 'FB 登入成功';
     }
 }
@@ -47,7 +42,7 @@ class FacebookAdapter implements IfaloInterface
 {
     private $facebook;
 
-    public function __construct(FaceBook $facebook)
+    public function __construct(Facebook $facebook)
     {
         $this->facebook = $facebook;
     }
@@ -63,8 +58,8 @@ class FacebookAdapter implements IfaloInterface
     }
 }
 
-$FB = new Facebook();
-$Adapter = new FacebookAdapter($FB);
+$fb = new Facebook();
+$adapter = new FacebookAdapter($fb);
 
-var_dump($Adapter->getToken());
-var_dump($Adapter->login());
+var_dump($adapter->getToken());
+var_dump($adapter->login());

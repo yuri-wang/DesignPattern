@@ -16,7 +16,8 @@ interface IfaloInterface
     public function login();
 }
 
-class Ifalo implements IfaloInterface {
+class Ifalo implements IfaloInterface
+{
     public function getToken() {
         return md5(uniqid(rand()));
     }
@@ -34,8 +35,8 @@ interface FaceBookInterface
     public function userLogin();
 }
 
-class Facebook implements FaceBookInterface {
-
+class Facebook implements FaceBookInterface
+{
     public function getAccessToken() {
         return md5(uniqid(rand()));
     }
