@@ -1,10 +1,10 @@
 Adapter Pattern
 ===
+![alt text](adapter_pattern.png)
 Definition
 -------
 將一個類別的介面，轉換成另一個介面以供客戶使用。
 轉接器讓原本介面不相容的類別可以合作。
-![alt text](https://github.com/yuri-wang/DesignPattern/blob/master/adapter_pattern.png)
 Story
 -------
 Ifalo 是一間購物網，有自己登入的入口，供會員登入
@@ -86,9 +86,11 @@ var_dump($Adapter->login());
 UML
 ---
 * 物件轉接器 (組合)
+
 ![alt text](adapter_pattern1.png)
 
 * 類別轉接器 (繼承)
+
 ![alt text](adapter_pattern2.png)
 
 * Target : 目標角色，客戶期待的介面
