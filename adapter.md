@@ -18,11 +18,13 @@ interface IfaloInterface
 
 class Ifalo implements IfaloInterface
 {
-    public function getToken() {
+    public function getToken()
+    {
         return md5(uniqid(rand()));
     }
 
-    public function login() {
+    public function login()
+    {
         return 'Ifalo 登入成功';
     }
 }
@@ -37,11 +39,13 @@ interface FaceBookInterface
 
 class Facebook implements FaceBookInterface
 {
-    public function getAccessToken() {
+    public function getAccessToken()
+    {
         return md5(uniqid(rand()));
     }
 
-    public function userLogin() {
+    public function userLogin()
+    {
         return 'FB 登入成功';
     }
 }
