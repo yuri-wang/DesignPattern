@@ -52,9 +52,8 @@ class FacebookAdapter implements IfaloInterface
 {
     private $facebook;
 
-    public function __construct(FaceBook $facebook)
+    public function __construct(Facebook $facebook)
     {
-	    // Adaptee
         $this->facebook = $facebook;
     }
 
@@ -72,15 +71,15 @@ class FacebookAdapter implements IfaloInterface
 Client 執行一下
 ```php
 // Ifalo 登入
-$Ifalo = new Ifalo();
-var_dump($Ifalo->getToken());
-var_dump($Ifalo->login());
+$ifalo = new Ifalo();
+var_dump($ifalo->getToken());
+var_dump($ifalo->login());
 
 // FB 登入
-$FB = new Facebook();
-$Adapter = new FacebookAdapter($FB);
-var_dump($Adapter->getToken());
-var_dump($Adapter->login());
+$fb = new Facebook();
+$adapter = new FacebookAdapter($fb);
+var_dump($adapter->getToken());
+var_dump($adapter->login());
 ```
 
 UML
