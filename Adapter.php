@@ -1,5 +1,6 @@
 <?php
 
+// Target
 interface IfaloInterface
 {
     public function getToken();
@@ -41,13 +42,14 @@ class Facebook implements FaceBookInterface
         return 'FB 登入成功';
     }
 }
-
+// Adapter
 class FacebookAdapter implements IfaloInterface
 {
     private $facebook;
 
     public function __construct(Facebook $facebook)
     {
+        // Adaptee
         $this->facebook = $facebook;
     }
 
